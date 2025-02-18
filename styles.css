@@ -405,7 +405,7 @@ z-index: 1 ;
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
@@ -824,16 +824,16 @@ footer {
         margin-bottom: 20px;
     }
     #avaliacoes{
-        padding: 50px 20px;
-    }
+        padding: 20px 20px;
+            }
     .slide{
         flex-direction: column;
         align-items: center;
+        margin: 100px;
     }
     .container{
         width: 80%;
-        padding: 20px;
-        margin-bottom: 50px;
+        padding: 10px 10px 10px 10px;
     }
     .faq-container {
         padding: 20px;
