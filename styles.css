@@ -954,6 +954,10 @@ footer {
     .card {
         width: 250px; /* Dois cards por linha em tablets */
     }
+
+    .content-clientes {
+        width: 100%;
+        margin: 0 auto;
 }
 
 /* Responsividade para celulares */
