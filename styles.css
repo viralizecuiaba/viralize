@@ -55,21 +55,67 @@ h5 {
 
 /* Cabeçalho */
 .header {
-    width: 100%;
-    max-width: 1920px;
-    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
-    padding: 50px 20px;
+    padding: 20px 64px;
+    background-color: hsla(0, 0%, 0%, 0.7);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
+.logo img {
+    height: 50px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.4s;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    display: flex;
+    margin top: 10px;
+    padding: 0;
+}
+
+.nav-menu ul li {
+    margin-left: 20px;
+}
+
+.nav-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    color: #4d00b5;
+}
 .container-header {
     height: 100vh;
     display: flex;
     flex-direction: row;
-    gap: 64px;
+    gap: 32px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -84,6 +130,8 @@ h5 {
 }
 
 .botao-especialista {
+    width: fit-content;
+    height: auto;
     background: linear-gradient(90deg, #4d00b5, #00a2ff);
     background-size: 200% 200%;
     color: #000;
@@ -816,135 +864,77 @@ footer {
     padding-bottom: 20px;
 }
 
-/* Responsividade */
+
+/* Estilos responsivos */
 @media (max-width: 768px) {
-    h2, h3 {
-        font-size: 2rem; /* Tamanho reduzido para mobile */
+    .menu-toggle {
+        display: flex;
     }
 
-    h4 {
-        font-size: 1rem; /* Tamanho reduzido para mobile */
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background-color: #000;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
     }
 
-    .header {
-        padding: 30px 10px;
+    .nav-menu.active {
+        right: 0;
     }
 
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu ul li {
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 768px) {
     .container-header {
         flex-direction: column;
-        gap: 10px;
+        padding-top: 100px;
+    }
+
+    .texto-container h4 {
+        font-size: 1.2rem;
     }
 
     .botao-especialista {
         font-size: 1rem;
-        padding: 8px 16px;
-    }
-
-    .texto-container h4 {
-        font-size: 1rem;
-    }
-
-    .quem-somos-content {
-        gap: 10px;
-    }
-
-    .texto-quemsomos {
-        width: 100%;
-        font-size: 1rem;
     }
 
     .card {
-        padding: 15px;
-    }
-
-    .card h4 {
-        font-size: 16px;
-    }
-
-    .card p {
-        font-size: 12px;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
     .membros-container {
-        display: flex;
         flex-direction: column;
-        gap: 24px;
-
-    .membro img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .cor-nome-equipe {
-        font-size: 1.5rem;
-    }
-
-    .cor-cargo-equipe {
-        font-size: 1rem;
     }
 
     .card-atendemos {
-        height: 120px;
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    .quem-atendemos h4 {
-        font-size: 1.5rem;
-        font-style: light;
-    }
-
-    #avaliacoes {
-        padding: 50px 10px;
+    .slideshow-container {
         height: auto;
     }
 
-    height: fit-content;
-    }
-    
-    .container {
-        padding: 15px;
-    }
-
-    .nome-feedback {
-        font-size: 1rem;
-    }
-
-    .container p {
-        font-size: 10px;
-    }
-
-    .frase {
-        font-size: 1.2rem;
-    }
-
-    .faq-container {
-        text-align: left;
-    }
-
-    .faq-pergunta {
-        font-size: 0.9rem;
-    }
-
-    .faq-resposta {
-        font-size: 0.8rem;
-    }
-
     .contato-container {
-        display: flex;
         flex-direction: column;
-        gap: 64px;
     }
 
-    .contato-form input,
-    .contato-form textarea {
-        padding: 8px;
-    }
-
-    .contato-form button {
-        font-size: 0.9rem;
-        padding: 8px 16px;
-    }
-
-    .texto-footer {
-        font-size: 1rem;
+    .contato-form {
+        width: 100%;
     }
 }
