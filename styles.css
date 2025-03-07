@@ -746,6 +746,14 @@ footer {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    h2, h3 {
+        font-size: 2rem; /* Tamanho reduzido para mobile */
+    }
+
+    h4 {
+        font-size: 1rem; /* Tamanho reduzido para mobile */
+    }
+
     .header {
         padding: 30px 10px;
     }
