@@ -761,12 +761,28 @@ footer {
 
 /* Responsividade */
 @media (max-width: 810px) {
-    #quem-somos {
-        padding: 50px 20px;
-        background-size: cover;
+    .texto-container h4 {
+    font-size: 1rem;
     }
+    .botao-especialista {
+        width: 80%;
+        font-size: 1rem;
+    }
+    .botao-especialista a{
+        font-size: 1.2rem;
+    }
+
+    #quem-somos {
+    padding: 5px 10px;
+    }
+
     .quem-somos-content {
-        padding: 20px;
+        flex-direction: column;
+    }
+    .texto-quemsomos {
+        width: 80%;
+        font-size: 1.2rem;
+        text-align: center;
     }
     #servicos {
         padding: 50px 20px;
@@ -860,7 +876,7 @@ footer {
     }
 
     .texto-footer h4 {
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-style: light;
     }
 }
