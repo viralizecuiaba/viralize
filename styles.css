@@ -117,16 +117,19 @@ section {
 
 /* Seção QUEM SOMOS */
 #quem-somos {
+width: 100%;
+height: fit-content;
+padding: 0 auto;
+}
+
+.quem-somos-content {
     position: relative;
     height: fit-content;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     text-align: center;
-    color: #cccccc;
-}
-
-.quem-somos-content {
+    gap: 64px;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -152,29 +155,23 @@ section {
     font-size: 1.2rem;
     font-family: 'Open Sans', sans-serif;
     font-weight: 200;
-    text-align: center;
+    text-align: left;
 }
 
 .cor-texto-quemsomos {
     color: #4b33b6;
 }
 
-.separador-onda {
-    width: 100%;
-    height: 100px;
-    background: #000;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 0 50%, 50% 0);
-    margin-top: 1px;
-}
-
 /* Seção SERVIÇOS */
 #servicos {
     background: black;
     padding: 50px 50px;
+    height: fit-content;
 }
 
 .container-card {
     width: 100%;
+    height: fit-content;
     padding: 16px;
     min-height: auto;
     overflow: hidden;
@@ -185,8 +182,9 @@ section {
 
 .container-card .card {
     flex: 0 0 auto;
-    width: 200px;
-    border-radius: 40px;
+    width: 250px;
+    justify-content: space-between;
+    align-items: start;
 }
 
 .card {
@@ -196,10 +194,9 @@ section {
     border: 1px solid #4d00b5;
     border-radius: 40px;
     backdrop-filter: blur(30px);
-    box-shadow: 0 5px 32px rgba(0, 0, 0, 0.9);
     overflow: hidden;
     margin: 0 auto;
-    transition: transform 0.3s ease;
+    transition: transform 1s ease;
 }
 
 .card img {
@@ -264,7 +261,6 @@ section {
     width: 100%;
     height: fit-content;    
     background-color: #000;
-    padding: 130px 10px;
 }
 
 .container-equipe {
@@ -306,54 +302,59 @@ section {
 
 /* Seção CLIENTES */
 #clientes {
-    background: ##000;
-    padding: 20px 20px;
+    width: 100%;
+    height: fit-content;    
+    margin: 0px 0px;
 }
 
 .quem-atendemos {
-    padding: 40px 20px;
-    text-align: center;
+    height: fit-content;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 0;
 }
 
 .quem-atendemos h4 {
-    width: 100%;
+    width: 60%;
     height: fit-content;
-    font-size: 1.6rem;
+    font-size: 1.7rem;
     color: #fff;
     font-weight: 800; 
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 15px;
-    overflow: hidden;
+    padding: 16px 16px 16px 16px;
 }
 
 .container-atendemos {
-    max-width: 1200px;
+    width: 80%;
+    height: fit-content;
     margin: 0 auto;
-    padding: 0 20px;
+    overflow: hidden;
 }
 
 .cards-container-atendemos {
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    gap: 56px;
+    gap: 16px;
     justify-content: center;
+    align-items: center;
 }
 
 .card-atendemos {
+    display: flex;
+    flex-wrap: wrap;
     background-size: cover;
     background-position: center;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 50px;
-    gap: 24px;
-    width: calc(30% - 20px);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    width: 30%;
     height: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     position: relative;
 }
 
+/* Efeito de sobreposição */
 .card-atendemos::before {
     content: '';
     position: absolute;
@@ -361,32 +362,25 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: hsla(268, 89%, 7%, 0.8);
     border-radius: 10px;
     z-index: 1;
 }
 
 .card-atendemos:hover{
-transform: scale(1.06);
-z-index: 1 ;
+transform: scale(1);
+background-color: hsla(267, 100%, 7%, 0.3);
+z-index: 1;
 }
 
 .card-atendemos * {
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
 .card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card h3 {
-    font-size: 1.3rem;
-    color: #fff;
-    font-family: 'Open Sans', sans-serif;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
-    margin: 0;
 }
 
 
@@ -398,6 +392,7 @@ z-index: 1 ;
     justify-content: center;
     align-items: center;
     text-align: center;
+    margin: 0 auto;
 }
 
 #avaliacoes h2 {
@@ -438,7 +433,7 @@ z-index: 1 ;
     --border-width: 2px; /* Largura da borda */
     --radius: 30px; /* Raio da borda */
     background-color: #000;
-    width: 600px;
+    width: 40%;
     height: 300px;
     margin: auto;
     padding: 50px;
@@ -632,11 +627,11 @@ z-index: 1 ;
 
 .contato-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     max-width: 1200px;
     height: fit-content;
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
 }
 
