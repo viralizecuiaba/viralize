@@ -952,14 +952,14 @@ footer {
 /* Responsividade para tablets */
 @media (max-width: 768px) {
     .card {
-        width: 45%; /* Dois cards por linha em tablets */
+        width: 250px; /* Dois cards por linha em tablets */
     }
 }
 
 /* Responsividade para celulares */
 @media (max-width: 480px) {
     .card {
-        width: 100%; /* Um card por linha em celulares */
+        width: 250px; /* Um card por linha em celulares */
     }
 
     .card h4 {
