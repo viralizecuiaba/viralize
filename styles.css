@@ -23,9 +23,10 @@
 /* Estilos gerais do corpo */
 body {
     font-family: 'Open Sans', sans-serif;
-    background-color: #000;
+    background: #000;
     color: #fff;
     font-weight: 300;
+    line-height: 1.5;
 }
 
 h2, h3 {
@@ -37,7 +38,8 @@ h2, h3 {
 
 h4 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    font-weight: normal;
 }
 
 h5 {
@@ -83,7 +85,7 @@ h5 {
     background: linear-gradient(90deg, #4d00b5, #00a2ff);
     background-size: 200% 200%;
     color: #000;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     padding: 15px 30px;
     border: none;
@@ -116,25 +118,12 @@ section {
 /* Seção QUEM SOMOS */
 #quem-somos {
     position: relative;
-    min-height: 40vh;
-    background-image: url('assets/images/fotomkt5.webp');
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
+    height: fit-content;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
     text-align: center;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    color: #cccccc;
 }
 
 .quem-somos-content {
@@ -180,36 +169,33 @@ section {
 
 /* Seção SERVIÇOS */
 #servicos {
-    background: radial-gradient(circle, rgba(57,132,206,1) 0%, rgba(126,0,159,1) 100%);
+    background: black;
     padding: 50px 50px;
 }
 
-.container-card-carrossel {
-    width: 100%;
-    margin-top: 100px;
-    min-height: auto;
-    overflow: visible;
-}
-
 .container-card {
+    width: 100%;
+    padding: 16px;
+    min-height: auto;
+    overflow: hidden;
     display: flex;
-    gap: 10px;
-    animation: slide 5s linear infinite;
+    gap: 32px;
+    animation: slide 5s linear infinite repeat;
 }
 
 .container-card .card {
     flex: 0 0 auto;
     width: 200px;
+    border-radius: 40px;
 }
 
 .card {
     position: relative;
     width: 200px;
-    padding: 20px;
-    background: #270253;
-    border-radius: 20px;
+    padding: 24px;
+    border: 1px solid #4d00b5;
+    border-radius: 40px;
     backdrop-filter: blur(30px);
-    border: 0px solid #fff;
     box-shadow: 0 5px 32px rgba(0, 0, 0, 0.9);
     overflow: hidden;
     margin: 0 auto;
@@ -237,7 +223,7 @@ section {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: radial-gradient(circle, rgba(57,132,206,1) 0%, rgba(126,0,159,1) 100%);
+    background: #4d00b5; /*radial-gradient(circle, rgba(57,132,206,1) 0%, rgba(126,0,159,1) 100%);*/
     color: #fff;
     padding: 10px 20px;
     border-radius: 15px;
@@ -256,7 +242,7 @@ section {
 }
 
 .whatsapp-button-card:hover {
-    background: radial-gradient(circle, rgba(57,132,206,1) 30%, #7e009f 100%);
+    background: #5f41e6; /*radial-gradient(circle, rgba(57,132,206,1) 30%, #7e009f 100%);*/
     transform: scale(1.05);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
 }
@@ -275,26 +261,23 @@ section {
 
 /* Seção EQUIPE */
 #equipe {
+    width: 100%;
+    height: fit-content;    
     background-color: #000;
     padding: 130px 10px;
 }
 
 .container-equipe {
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
 }
 
-.cor-titulo-equipe {
-    color: #fff;
-    font-size: 2.5rem;
-    font-family: 'Stretch Pro', sans-serif;
-    margin-bottom: 40px;
-}
-
 .membros-container {
+    width: 100%;
+    height: fit-content;
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 120px;
     flex-wrap: wrap;
 }
 
@@ -316,39 +299,33 @@ section {
 }
 
 .cor-cargo-equipe {
-    color: #cfcfcf;
+    color: #cccccc;
     font-size: 1rem;
     font-family: 'Open Sans', sans-serif;
 }
 
-.separador-onda-invertida {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(90deg, rgba(57,132,206,1) 0%, rgba(126,0,159,1) 100%);
-    clip-path: polygon(50% 0, 0 100%, 100% 100%);
-    margin-top: -60px;
-}
-
 /* Seção CLIENTES */
 #clientes {
-    background: linear-gradient(90deg, rgba(57,132,206,1) 0%, rgba(126,0,159,1) 100%);
+    background: ##000;
     padding: 20px 20px;
 }
 
 .quem-atendemos {
-    background: linear-gradient(90deg, rgba(57,132,206,1) 0%, #7e009f 100%);
     padding: 40px 20px;
     text-align: center;
 }
 
 .quem-atendemos h4 {
+    width: 100%;
+    height: fit-content;
     font-size: 1.6rem;
-    color: #ffffff;
+    color: #fff;
+    font-weight: 800; 
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
     padding: 15px 15px;
+    overflow: hidden;
 }
 
 .container-atendemos {
@@ -360,7 +337,7 @@ section {
 .cards-container-atendemos {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 56px;
     justify-content: center;
 }
 
@@ -370,7 +347,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 50px;
-    gap: 10px;
+    gap: 24px;
     width: calc(30% - 20px);
     height: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -412,18 +389,12 @@ z-index: 1 ;
     margin: 0;
 }
 
-.separador-triangulo-invertido {
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(90deg, #3984ce 0%, #7e009f 100%);
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-    margin-top: -60px;
-}
 
 /* Estilos para a seção AVALIAÇÕES */
 #avaliacoes {
+    width: 100%;
+    height: fit-content;
     background-color: #000;
-    padding: 100px 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -440,6 +411,7 @@ z-index: 1 ;
 .slideshow-container {
     position: relative;
     width: 100%;
+    height: fit-content;
     height: 310px;
     margin: auto;
     overflow: hidden;
@@ -476,7 +448,6 @@ z-index: 1 ;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: flex;
     position: relative;
     isolation: isolate;
 }
@@ -651,6 +622,10 @@ z-index: 1 ;
 
 /* Seção CONTATO */
 #contato {
+    width: 100%;
+    height: fit-content;
+    justify-content: space-between;
+    align-items: center;
     background-color: #000;
     padding: 100px 20px;
 }
@@ -658,8 +633,10 @@ z-index: 1 ;
 .contato-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
+    width: 100%;
     max-width: 1200px;
+    height: fit-content;
     margin: 0 auto;
 }
 
@@ -688,7 +665,7 @@ z-index: 1 ;
 /* Estilo do botão instagram */
 .social-icons {
     display: flex;
-    gap: 15px;
+    gap: 24px;
     align-items: center;
     justify-content: center;
     margin: auto;
