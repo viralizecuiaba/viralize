@@ -866,7 +866,7 @@ footer {
 
 @media (max-width: 768px) {
     h2 {
-        font-size: 2rem; /* Reduz o tamanho da fonte para tablets e celulares */
+        font-size: 1.8rem; /* Reduz o tamanho da fonte para tablets e celulares */
         margin-bottom: 20px;
     }
 
