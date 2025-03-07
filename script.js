@@ -1,3 +1,24 @@
+// Menu Hambúrguer
+document.addEventListener("DOMContentLoaded", function () {
+    const menuToggle = document.getElementById("mobile-menu");
+    const navMenu = document.querySelector(".nav-menu");
+
+    menuToggle.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+        menuToggle.classList.toggle("active");
+    });
+
+    // Fechar o menu ao clicar em um link
+    const navLinks = document.querySelectorAll(".nav-menu ul li a");
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            navMenu.classList.remove("active");
+            menuToggle.classList.remove("active");
+        });
+    });
+});
+
+
 // Animação de entrada para os elementos da seção "Quem Somos"
 document.addEventListener("DOMContentLoaded", function () {
     const quemSomos = document.querySelector("#quem-somos .texto-quemsomos");
