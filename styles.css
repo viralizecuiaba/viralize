@@ -27,6 +27,7 @@ body {
     color: #fff;
     font-weight: 300;
     line-height: 1.5;
+    text-align: center; /* Centraliza todo o texto por padrão */
 }
 
 h2, h3 {
@@ -34,23 +35,27 @@ h2, h3 {
     font-family: 'Stretch Pro', sans-serif;
     font-size: 3rem;
     color: #fff;
+    text-align: center; /* Centraliza os títulos */
 }
 
 h4 {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2rem;
     font-weight: normal;
+    text-align: center; /* Centraliza os subtítulos */
 }
 
 h5 {
     font-family: 'Open Sans', sans-serif;
     font-size: 1.5rem;
     font-weight: 600;
+    text-align: center; /* Centraliza os títulos menores */
 }
 
 .texto-menor {
     font-size: 0.7rem;
     color: #ffffff;
+    text-align: center; /* Centraliza textos menores */
 }
 
 /* Cabeçalho */
@@ -92,7 +97,7 @@ h5 {
 .nav-menu ul {
     list-style: none;
     display: flex;
-    margin top: 10px;
+    margin-top: 10px;
     padding: 0;
 }
 
@@ -111,6 +116,7 @@ h5 {
 .nav-menu ul li a:hover {
     color: #4d00b5;
 }
+
 .container-header {
     height: 100vh;
     display: flex;
@@ -173,7 +179,7 @@ section {
     padding: 100px;
 }
 
-.fundo-pretitulo{
+.fundo-pretitulo {
     position: relative;
     width: fit-content;
     height: fit-content;
@@ -182,9 +188,6 @@ section {
     text-align: center;
     background-color: #200049;
     border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 5px 10px;
 }
 
@@ -248,16 +251,16 @@ section {
     gap: 24px;
 }
 
-.container-card{
+.container-card {
     width: 100%;
     height: fit-content;
     padding: 16px;
     min-height: auto;
     overflow: hidden;
     display: flex;
-    gap: 24px; /* Espaçamento entre os cards */
-    flex-wrap: wrap; /* Permite que os cards quebrem para a próxima linha */
-    justify-content: center; /* Centraliza os cards horizontalmente */
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card {
@@ -279,12 +282,14 @@ section {
 .card h4 {
     margin: 0 0 10px;
     font-size: 18px;
+    text-align: center;
 }
 
 .card p {
     margin: 0;
     font-size: 14px;
     line-height: 1.5;
+    text-align: center;
 }
 
 .whatsapp-button-card {
@@ -355,9 +360,6 @@ section {
     text-align: center;
     background-color: #ffffff;
     border-radius: 16px;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
     padding: 5px 10px;
 }
 
@@ -422,7 +424,7 @@ section {
 .quem-atendemos {
     display: flex;
     flex-wrap: wrap;
-    width: 80%
+    width: 80%;
     height: auto;
     overflow: hidden;
     margin: 0 auto;
@@ -531,7 +533,7 @@ section {
     max-width: 800px;
     margin: 0 auto;
     overflow: hidden;
-    height: 450px; /* Defina uma altura fixa para o container */
+    height: 450px;
 }
 
 .slide {
@@ -864,36 +866,17 @@ footer {
     padding-bottom: 20px;
 }
 
+/* Responsividade para tablets e celulares */
 @media (max-width: 768px) {
     h2 {
-        font-size: 1.8rem; /* Reduz o tamanho da fonte para tablets e celulares */
+        font-size: 2rem;
         margin-bottom: 20px;
     }
 
     h4 {
-        font-size: 1rem; /* Reduz o tamanho da fonte para tablets e celulares */
+        font-size: 1rem;
     }
 
-    body {
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    font-size: 1rem;
-    line-height: 1.5;
-}
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 1.5rem; /* Tamanho ainda menor para celulares pequenos */
-    }
-
-    h4 {
-        font-size: 0.9rem; /* Tamanho ainda menor para celulares pequenos */
-    }
-}
-
-/* Estilos responsivos */
-@media (max-width: 768px) {
     .menu-toggle {
         display: flex;
     }
@@ -923,9 +906,7 @@ footer {
     .nav-menu ul li {
         margin: 20px 0;
     }
-}
 
-@media (max-width: 768px) {
     .container-header {
         flex-direction: column;
         padding-top: 100px;
@@ -939,53 +920,14 @@ footer {
         font-size: 1rem;
     }
 
-/* Estilos padrão para os cards */
-.container-card {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 24px;
-    justify-content: center;
-}
+    .container-card {
+        flex-direction: column;
+        align-items: center;
+    }
 
-.card {
-    width: 250px; /* Largura fixa para desktop */
-    padding: 20px;
-    border: 1px solid #4d00b5;
-    border-radius: 20px;
-    backdrop-filter: blur(30px);
-    margin: 0 auto;
-}
-
-/* Responsividade para tablets */
-@media (max-width: 768px) {
     .card {
-        width: 250px; /* Dois cards por linha em tablets */
+        width: 90%;
     }
-
-    .content-clientes {
-        width: 100%;
-        margin: 0 auto;
-}
-
-/* Responsividade para celulares */
-@media (max-width: 480px) {
-    .card {
-        width: 250px; /* Um card por linha em celulares */
-    }
-
-    .card h4 {
-        font-size: 1.1rem; /* Reduz o tamanho da fonte do título do card */
-    }
-
-    .card p {
-        font-size: 0.9rem; /* Reduz o tamanho da fonte do texto do card */
-    }
-
-    .whatsapp-button-card {
-        font-size: 0.9rem; /* Reduz o tamanho da fonte do botão */
-        padding: 8px 16px; /* Ajusta o padding do botão */
-    }
-}
 
     .membros-container {
         flex-direction: column;
@@ -1006,5 +948,28 @@ footer {
 
     .contato-form {
         width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 0.9rem;
+    }
+
+    .card h4 {
+        font-size: 1.1rem;
+    }
+
+    .card p {
+        font-size: 0.9rem;
+    }
+
+    .whatsapp-button-card {
+        font-size: 0.9rem;
+        padding: 8px 16px;
     }
 }
