@@ -31,7 +31,7 @@ body {
 }
 
 h2, h3 {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     font-family: 'Stretch Pro', sans-serif;
     font-size: 3rem;
     color: #fff;
@@ -167,7 +167,7 @@ h5 {
 
 /* Seções principais */
 section {
-    padding: 50px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -186,7 +186,7 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #200049;
+    background-color: #4d00b5;
     border-radius: 16px;
     padding: 5px 10px;
 }
@@ -195,7 +195,7 @@ section {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #8c34ff;
+    color: #cccccc;
 }
 
 .quem-somos-content {
@@ -236,7 +236,6 @@ section {
 /* Seção SERVIÇOS */
 #servicos {
     width: 100%;
-    background: black;
     padding: 100px;
     height: fit-content;
 }
@@ -406,68 +405,50 @@ section {
 #clientes {
     width: 100%;
     height: fit-content;
-    background-color: #000000;
     padding: 100px;
 }
 
-.content-clientes {
+.heading-clientes {
     width: 100%;
     height: fit-content;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 0 auto;
-    padding: 24px;
+    gap: 24px;
 }
 
-.quem-atendemos {
+.cards-clientes {
+    width: 100%;
+    height: fit-content;
+    padding: 16px;
+    min-height: auto;
+    overflow: hidden;
     display: flex;
+    gap: 24px;
     flex-wrap: wrap;
-    width: 80%;
-    height: auto;
-    overflow: hidden;
-    margin: 0 auto;
-}
-
-.quem-atendemos h4 {
-    width: 100%;
-    height: fit-content;
-    font-size: 2rem;
-    color: #fff;
-    font-weight: 600;
-    padding: 10px;
-}
-
-.container-atendemos {
-    width: 100%;
-    height: fit-content;
-    margin: 0 auto;
-    overflow: hidden;
-}
-
-.cards-container-atendemos {
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
     justify-content: center;
-    align-items: center;
 }
 
 .card-atendemos {
+    width: 300px;
+    height: 180px;
     display: flex;
-    flex-wrap: wrap;
     background-size: cover;
     background-position: center;
+    border-radius: 30px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-radius: 20px;
-    width: 100%;
-    height: 150px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    padding: 24px;
+}
+
+.card-atendemos h5 {
+    width: 60%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.5rem;
+    color: #dedede;
+    font-weight: 800;
 }
 
 .card-atendemos::before {
@@ -478,7 +459,7 @@ section {
     width: 100%;
     height: 100%;
     background-color: hsla(268, 89%, 7%, 0.8);
-    border-radius: 10px;
+    border-radius: 30px;
     z-index: 1;
 }
 
@@ -501,45 +482,36 @@ section {
 /* Estilos para a seção AVALIAÇÕES */
 #avaliacoes {
     width: 100%;
-    height: fit-content;
-    background-color: #000;
+    height: 600px;
     justify-content: center;
     align-items: center;
     text-align: center;
     margin: 0 auto;
-    padding: 5px;
+    padding: 100px;
 }
 
-#avaliacoes h2 {
-    font-family: 'Stretch Pro', sans-serif;
-    font-size: 2rem;
-    color: #fff;
-}
-
-.container-avaliacoes {
+.stack-avaliacoes {
     width: 100%;
-    height: fit-content;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
-    padding: 24px;
 }
 
-.slideshow-container {
+.slideshow {
     position: relative;
     width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    height: 450px;
+    height: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 .slide {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: auto;
     opacity: 0;
     transition: opacity 1s ease-in-out;
 }
@@ -552,11 +524,10 @@ section {
     --border-width: 2px;
     --radius: 30px;
     background-color: #000;
-    width: 90%;
-    max-width: 600px;
-    height: auto;
-    margin: auto;
-    padding: 20px;
+    width: 40%;
+    height: fit-content;
+    margin: 0 auto;
+    padding: 20px 20px;
     border-radius: var(--radius);
     border: var(--border-width) solid transparent;
     display: flex;
@@ -633,50 +604,23 @@ section {
     }
 }
 
-/* Visor de Frase */
-.visor-frase {
-    width: 100%;
-    background-color: #000;
-    padding: 20px 0;
-    overflow: hidden;
-    position: relative;
-}
-
-.frase-container {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
-    animation: scrollFrase 15s linear infinite;
-}
-
-.frase {
-    font-family: 'Stretch Pro', sans-serif;
-    font-size: 1.5rem;
-    color: #fff;
-    margin-right: 20px;
-}
-
-@keyframes scrollFrase {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
 
 /* Seção DÚVIDAS FREQUENTES */
 #duvidas-frequentes {
     background-color: #000;
     margin: 0 auto;
     text-align: center;
+    padding: 100px;
 }
 
-#duvidas-frequentes h2 {
-    font-family: 'Stretch Pro', sans-serif;
-    font-size: 2rem;
-    color: #fff;
-    margin-bottom: 20px;
+.container-faq {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
 
 .faq-container {
@@ -693,11 +637,12 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 0;
+    padding: 10px 10px;
     cursor: pointer;
     color: #fff;
     font-family: 'Open Sans', sans-serif;
     font-size: 1rem;
+    text-align: left;
     transition: color 0.3s ease;
 }
 
@@ -727,7 +672,7 @@ section {
 }
 
 .faq-item.active .faq-resposta {
-    max-height: 200px;
+    max-height: 300px;
     padding-top: 10px;
 }
 
@@ -735,13 +680,13 @@ section {
     transform: rotate(180deg);
 }
 
+
 /* Seção CONTATO */
 #contato {
     width: 100%;
     height: fit-content;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
     padding: 50px 20px;
 }
 
@@ -751,10 +696,10 @@ section {
     width: 100%;
     max-width: 1200px;
     height: fit-content;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    gap: 20px;
+    gap: 24px;
 }
 
 .contato-texto {
@@ -868,15 +813,21 @@ footer {
 
 /* Responsividade para tablets e celulares */
 @media (max-width: 768px) {
+    p {
+        font-size: 1rem;
+    }
     h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
+        font-size: 2.2rem;
     }
 
     h4 {
         font-size: 1rem;
     }
-
+    
+    h5 {
+        font-size: 0.8rem;
+    }
+    
     .menu-toggle {
         display: flex;
     }
@@ -907,13 +858,20 @@ footer {
         margin: 20px 0;
     }
 
+    #section {
+        width: 100%;
+        height: fit-content;
+        margin: 0 auto;
+        padding: 20px 20px;
+    }
+
     .container-header {
         flex-direction: column;
         padding-top: 100px;
     }
 
     .texto-container h4 {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 
     .botao-especialista {
@@ -921,25 +879,89 @@ footer {
     }
 
     .container-card {
+        width: 390px;
         flex-direction: column;
         align-items: center;
     }
 
     .card {
-        width: 90%;
+        width: 200px;
+        height: auto;
+    }
+    
+    .card p {
+        font-size: 1rem;
+    }
+    
+    .card h2 {
+        font-size: 2.2rem;
+    }
+
+    .card h4 {
+        font-size: 1rem;
+    }
+
+    .membro img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .cor-nome-equipe h5 {
+        font-size: 1.1rem;
+    }
+    .cor-cargo-equipe {
+        font-size: 1rem;    
+    }
+
+    #clientes h2 {
+        font-size: 2.2rem;
     }
 
     .membros-container {
         flex-direction: column;
     }
 
-    .card-atendemos {
-        width: 100%;
-        margin-bottom: 20px;
+    .cards-clientes {
+        width: 150%;
+        padding: 20px 20px;
     }
 
-    .slideshow-container {
+    .card-atendemos h5 {
+        font-size: 1.3rem;
+    }
+
+    #avaliacoes {
+        width: 100%;
+        height: 600px;
+        margin: 0 auto;
+        padding: 24px;
+    }
+
+    .stack-avaliacoes {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .slideshow {
+        width: 100%;
         height: auto;
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .slide {
+        width: 100%;
+        height: auto;
+    }
+    .container {
+        width: 80%;
+        padding: 20px 20px;
+    }
+    .slideactive {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .contato-container {
@@ -947,29 +969,16 @@ footer {
     }
 
     .contato-form {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 1.5rem;
-    }
-
-    h4 {
-        font-size: 0.9rem;
-    }
-
-    .card h4 {
-        font-size: 1.1rem;
-    }
-
-    .card p {
-        font-size: 0.9rem;
+        width: 80%;
     }
 
     .whatsapp-button-card {
-        font-size: 0.9rem;
-        padding: 8px 16px;
+        font-size: 1rem;
+        padding: 5px 10px;
     }
+
+    .contato-texto {
+        width: 80%;
+    }
+
 }
