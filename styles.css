@@ -186,16 +186,18 @@ section {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background-color: #4d00b5;
+    background: linear-gradient(90deg, #4d00b5, #00a2ff);
     border-radius: 16px;
     padding: 5px 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: animarGradiente 3s infinite alternate;
 }
 
 .texto-pretitulo {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #cccccc;
+    color: #fff;
 }
 
 .quem-somos-content {
@@ -366,7 +368,7 @@ section {
     font-family: 'Open Sans', sans-serif;
     font-size: 0.8rem;
     font-weight: 600;
-    color: #6c00f9;
+    color: #4d00b5;
 }
 
 .membros-container {
