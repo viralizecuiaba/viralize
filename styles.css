@@ -672,7 +672,7 @@ section {
 }
 
 .faq-item.active .faq-resposta {
-    max-height: 300px;
+    max-height: 600px;
     padding-top: 10px;
 }
 
@@ -885,7 +885,7 @@ footer {
     }
 
     .card {
-        width: 200px;
+        width: 230px;
         height: auto;
     }
     
